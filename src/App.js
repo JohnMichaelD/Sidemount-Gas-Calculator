@@ -47,12 +47,32 @@ class App extends React.Component {
 
     subtractDifference(){
       let sum=this.state.addTogether - (this.state.leftTankPressure - this.state.rightTankPressure)
-      this.setState({subtractDifference:sum})
+      this.setState({
+        step: "subtractDifference",
+        subtractDifference:sum
+        
+      })
     }
+
     divide(){
-      
+      let sum=Math.floor(this.state.subtractDifference/2)
+      this.setState({
+        step: "divide",
+        divide:sum
+      })
+    
     }
     
+    subtractFromLowerTank(){
+      let sum = this.state.divide
+        if (this.state.leftTankPressure > this.state.rightTankPressure) {
+          let sum=this.state.leftTankPressure
+        } else {
+          let sum=this.state.rightTankPressure 
+        
+        }
+        }
+    }
     render() {
       return (
         <div className="App">
@@ -70,6 +90,9 @@ class App extends React.Component {
             {this.state.step === "thirds" ? <div onClick={()=>{this.addTogether()}} className="answerButton"> Add Together</div> : ""}
             {this.state.step === "addedTogether" ? <div onClick={()=>{this.subtractDifference()}} className="answerButton"> Subtract Difference</div> : ""}
             {this.state.step === "subtractDifference" ? <div onClick={()=>{this.divide()}} className="answerButton"> Divide in Half</div> : ""}
+            {this.state.step === "divide" ? <div onClick={()=>{this.subtractFromLowerTank()}} className="answerButton"> Subtract From Lower Tank</div> : ""}
+            {this.state.step === "subtractFromLowerTank" ? <div onClick={()=>{this.finalResult()}} className="answerButton"> Calculate Turn Pressure</div> : ""}
+            {this.state.step === "finalResult" ? <div onClick={()=>{this.done()}} className="answerButton"> Subtract From Lower Tank</div> : ""}
 
             <div className="tankPressureRow">
               <p>L Third : R Third</p>
@@ -84,9 +107,19 @@ class App extends React.Component {
               <p>{this.state.subtractDifference}</p>
             </div>
             <div className="tankPressureRow">
-              <p>Divide in Half</p>
+              <p>Divide in Half:</p>
               <p>{this.state.divide}</p>
             </div>
+            <div className="tankPressureRow">
+              <p>Subtract From Lower Tank:</p>
+              <p>{this.state.subtractFromLowerTank}</p>
+            </div>
+            <div className="finalResult">
+              <h2>Turn Pressure:</h2>
+              <p>{this.state.finalResult}</p>
+            </div>
+            
+              
         </div>
       );
     }
