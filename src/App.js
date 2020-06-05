@@ -131,7 +131,7 @@ class App extends React.Component {
               <h2>Turn Pressure:</h2> <h2>{this.state.finalResult}</h2>
             </div>
             <div className="howThisWorks">
-              <h5>Curious How This Works?</h5>
+              <h5>Curious How This Works? Coming Soon...</h5>
             </div>
         </div>
       );

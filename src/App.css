@@ -1,6 +1,7 @@
 #root {
   display: flex;
   justify-content: center;
+  background-color: whitesmoke ;
 }
 
 .App {
@@ -9,6 +10,7 @@
   align-items: center;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   width: 400px;
+  height: 800px;
   text-align: center;
 }
 
@@ -41,6 +43,7 @@
   text-align: center;
   color: blue;
   border: solid black 1px; 
+  background-color: white;
   width: 100px;
   cursor: pointer;
   margin: 1.5%;
