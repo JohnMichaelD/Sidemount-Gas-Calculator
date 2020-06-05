@@ -1,7 +1,15 @@
+#root {
+  display: flex;
+  justify-content: center;
+}
+
 .App {
   display: flex; 
   flex-direction: column;
   align-items: center;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  width: 400px;
+  text-align: center;
 }
 
 .App-logo {
@@ -18,18 +26,20 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 25%;
+  width: 85%;
 }
 .finalResult {
-
+  text-align: center;
   
+
 }
 
 .pressureInput {
-  height: 80%;
+  height: 25%;
 }
 .answerButton {
   text-align: center;
+  color: blue;
   border: solid black 1px; 
   width: 100px;
   cursor: pointer;
@@ -50,6 +60,11 @@
 
 .App-link {
   color: #61dafb;
+}
+
+.howThisWorks {
+  cursor: pointer;
+  color:blue;
 }
 
 @keyframes App-logo-spin {
