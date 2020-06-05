@@ -47,7 +47,7 @@ class App extends React.Component {
     }
 
     subtractDifference() {
-      let sum=this.state.addTogether - (this.state.leftTankPressure - this.state.rightTankPressure)
+      let sum=this.state.addTogether - Math.abs(this.state.leftTankPressure - this.state.rightTankPressure)
       this.setState({
         step: "subtractDifference",
         subtractDifference:sum
