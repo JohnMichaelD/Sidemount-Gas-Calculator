@@ -1,4 +1,4 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This is a tool to help users learning air management for sidemount diving. [Check out the website here!](https://www.sidemountcalc.com).
 
 ## Available Scripts
 
