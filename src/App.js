@@ -8,6 +8,7 @@ class App extends React.Component {
       this.state={
         leftTankThird: "?",
         rightTankThird: "?",
+        finalResult: "...",
         step: "input"
 
       }
@@ -18,15 +19,25 @@ class App extends React.Component {
       let leftTankThird = Math.floor(leftTankPressure/3)
       console.log(leftTankThird)
 
-      if (leftTankThird === 10) {
+      if (leftTankThird >= 15) {
         console.log("it's gonna blow!")
       } else {
         console.log("you're okay")
       }
 
+     
+
       let rightTankPressure=document.getElementById("rTankPressure").value
       let rightTankThird=Math.floor(rightTankPressure/3)
       console.log(rightTankThird)
+
+      if (rightTankPressure <= 15) {
+        alert("Warning: Starting a dive with a tank below 1500 PSI / 100 BAR is NOT reccomended.")
+      } else if (leftTankPressure <= 15) {
+        alert("Warning: Starting a dive with a tank below 1500 PSI / 100 BAR is NOT reccomended.")
+      } else {
+        console.log("you're okay")
+      }
 
       this.setState({
         leftTankThird: leftTankThird,
@@ -98,6 +109,9 @@ class App extends React.Component {
               <p>Right Tank Pressure:</p>
               <input className="pressureInput" id="rTankPressure"></input>
             </div>
+            <div>
+              <input type="reset" value="Reset Input" className="resetButton"></input>
+            </div>
 
             {this.state.step === "input" ? <div onClick={()=>{this.calculateThirds()}} className="answerButton">Calculate Thirds</div> : ""}
             {this.state.step === "thirds" ? <div onClick={()=>{this.addTogether()}} className="answerButton">Add Together</div> : ""}
@@ -108,7 +122,7 @@ class App extends React.Component {
             {this.state.step === "finalResult" ? <div onClick={()=>{this.finalResult()}} className="answerButton">Done!</div> : ""}
 
             <div className="tankPressureRow">
-              <p>L Third : R Third</p>
+              <p>Left Third : Right Third</p>
               <p>{this.state.leftTankThird}:{this.state.rightTankThird}</p>
             </div>
             <div className="tankPressureRow">
