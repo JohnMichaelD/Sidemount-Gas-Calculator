@@ -12,6 +12,8 @@
   width: 400px;
   height: 800px;
   text-align: center;
+  background-color: black;
+  color: white;
 }
 
 .App-logo {
@@ -25,31 +27,41 @@
     animation: App-logo-spin infinite 20s linear;
   }
 }
+
+.header {
+  border: solid;
+  border-left: black;
+  border-right: black;
+  background-color: black;
+}
+
 .tankPressureRow {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 85%;
+  width: 90%;
 }
 .finalResult {
   text-align: center;
-  
-
 }
 
 .pressureInput {
   height: 25%;
+  display: flex;
+  justify-content: end;
+  border-radius: 5%;
 }
 
 .answerButton {
   text-align: center;
-  color: blue;
+  color: white;
   border: solid black 1px; 
-  background-color: white;
+  background-color: grey;
   width: 100px;
   cursor: pointer;
   margin: 1.5%;
   padding: 0.5%;
+  border-radius: 5%;
 }
 
 .App-header {

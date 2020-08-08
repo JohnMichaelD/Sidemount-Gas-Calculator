@@ -94,23 +94,21 @@ class App extends React.Component {
           step: "finalResult",
           finalResult:sum
         })
+  
     }
     
 
     render() {
       return (
         <div className="App">
-            <h1>Sidemount Gas Calculator</h1>
+            <h1 className="header">Sidemount Gas Calculator</h1>
             <div className="tankPressureRow">
               <p>Left Tank Pressure:</p> 
-              <input className="pressureInput" id="lTankPressure"></input>
+              <input className="pressureInput" id="lTankPressure"></input> <p>PSI</p>
             </div>
             <div className="tankPressureRow">
-              <p>Right Tank Pressure:</p>
-              <input className="pressureInput" id="rTankPressure"></input>
-            </div>
-            <div>
-              <input type="reset" value="Reset Input" className="resetButton"></input>
+              <p2>Right Tank Pressure:</p2>
+              <input className="pressureInput" id="rTankPressure"></input> <p>PSI</p>
             </div>
 
             {this.state.step === "input" ? <div onClick={()=>{this.calculateThirds()}} className="answerButton">Calculate Thirds</div> : ""}
@@ -120,6 +118,9 @@ class App extends React.Component {
             {this.state.step === "divide" ? <div onClick={()=>{this.subtractFromLowerTank()}} className="answerButton">Subtract From Lower Tank</div> : ""}
             {this.state.step === "subtractFromLowerTank" ? <div onClick={()=>{this.finalResult()}} className="answerButton">So Turn Pressure =</div> : ""}
             {this.state.step === "finalResult" ? <div onClick={()=>{this.finalResult()}} className="answerButton">Done!</div> : ""}
+            {this.state.step === "refresh" ? <div onClick={()=>{this.refresh()}} className="answerButton">Refresh?</div> : ""}
+
+
 
             <div className="tankPressureRow">
               <p>Left Third : Right Third</p>
@@ -148,6 +149,8 @@ class App extends React.Component {
               <h5>Curious How This Works? Coming Soon...</h5>
             </div>
         </div>
+
+      
       );
     } 
   }
