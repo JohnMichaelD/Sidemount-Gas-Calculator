@@ -1,44 +1,90 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+
+
+html {
+  min-height: 100%;
+  background-image: url(./background.JPG);
+  background-color: #d3f86b;
+  background-blend-mode: darken;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  box-sizing: border-box;
+}
+/*
 #root {
   display: flex;
   justify-content: center;
-  background-color: whitesmoke ;
+  float: left;
 }
+
+/*
 
 .App {
   display: flex; 
+  justify-content: center;
   flex-direction: column;
-  align-items: center;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
-  width: 400px;
+  /*width: 400px;
   height: 800px;
   text-align: center;
-  background-color: black;
+  background-color: yellow;
+  
+}
+*/
+.navbar {
+  height: 12%;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  margin-left: 40px;
   color: white;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-  
+.nav {
+  flex: 1;
+  text-align: right;
+  margin-right: 40px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.header {
-  border: solid;
-  border-left: black;
-  border-right: black;
+.details1 {
   background-color: black;
+  opacity: 75%;
+}
+
+.calculator{
+  display: flex;
+ justify-content: center;
+  align-items: center;
+ display: flex; 
+ flex-direction: column;
+ font-family: Verdana, Geneva, Tahoma, sans-serif;
+ width: 600px;
+ height: 400px;
+ text-align: center;
+ background-color: black;
+ color: white;
+ opacity: 80%;
+
+}
+
+.body{
+ display: flex; 
+ flex-direction: column;
+ font-family: Verdana, Geneva, Tahoma, sans-serif;
+ width: 50%;
+ text-align: center;
+ background-color: black;
+ color: white;
+ border-radius: 20%;
 }
 
 .tankPressureRow {
   display: flex;
   justify-content: space-between;
-  align-items: center;
   width: 90%;
 }
 .finalResult {
@@ -64,25 +110,27 @@
   border-radius: 5%;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+
+.detailsSubDif{
+clear: right;
+}
+
+.SubDifSpan{
+  float:left;
+}
+
+.footer{
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: #000000;
+  opacity: 15%;
   color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-.howThisWorks {
+  text-align: center;
   cursor: pointer;
-  color:blue;
 }
+
 
 @keyframes App-logo-spin {
   from {
@@ -92,3 +140,4 @@
     transform: rotate(360deg);
   }
 }
+
