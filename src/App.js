@@ -21,6 +21,7 @@ class App extends React.Component {
     let leftTankThird = Math.floor(leftTankPressure / 3)
     console.log(leftTankThird)
 
+    //Alert for starting pressures below 1500PSI
     if (leftTankThird >= 15) {
       console.log("it's gonna blow!")
     } else {
@@ -108,10 +109,11 @@ class App extends React.Component {
           <header className="navbar">
             <h1>Sidemount Calc</h1>
             <nav className="nav">
-              <ul>
-                <li><a href=""> HOME </a></li>
-                <li><a href=""> ABOUT </a></li>
-              </ul>
+              <h5>
+              <a href="#">HOME </a>
+              
+              <a href="#"> INFO</a>
+              </h5> 
             </nav>
             {/*
                   <details>
@@ -181,8 +183,9 @@ class App extends React.Component {
           </div>
 
           <footer className="footer">
-            <p>Built by JMD™</p>
+            <p><u>More by JMD™</u></p>
           </footer>
+
         </div>
       </div>
     );
