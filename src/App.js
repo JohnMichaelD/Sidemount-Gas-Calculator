@@ -102,33 +102,19 @@ class App extends React.Component {
   //HTML code begins here.
   render() {
     return (
+      
 
       <div className="App">
 
-        <div>
-          <header className="navbar">
-            <h1>Sidemount Calc</h1>
-            <nav className="nav">
-              <h5>
-              <a href="#">HOME </a>
-
-              <a href="#"> INFO</a>
-              </h5> 
-            </nav>
-            {/*
-                  <details>
-                    <summary>What is this?</summary>
-                    <p className="details1">This is a calculator to help you memorize the steps in finding the thirds and turn pressure of two 3000psi rated tanks before each dive.</p>
-                    <br></br>
-                    <p className="details1">Instructions: Insert the starting tank pressures as two digit numbers. Ex: 3000psi and 2900psi should be entered as 30 and 29. </p>
-                  </details>
-                  */}
+        
+          <header className="header">
+            <h1 className="pageTitle">Sidemount Calc</h1>
           </header>
 
           {/*Full Calculator Contianer*/}
-        <div className="calcRow">
+          <div className="calcRow">
 
-          <div className="calcLeftSpace"> Boat</div>
+  
 
           <div className="calculator">
             <div className="tankPressureRow">
@@ -139,7 +125,7 @@ class App extends React.Component {
               <p2>Right Tank Pressure:</p2>
               <input className="pressureInput" id="rTankPressure"></input> <p>PSI</p>
             </div>
-        </div>
+        
 
             {this.state.step === "input" ? <div onClick={() => { this.calculateThirds() }} className="answerButton">Calculate Thirds</div> : ""}
             {this.state.step === "thirds" ? <div onClick={() => { this.addTogether() }} className="answerButton">Add Together</div> : ""}
@@ -163,10 +149,6 @@ class App extends React.Component {
             <div className="tankPressureRow">
               <span className="SubDifSpan">
                 <p>Subtract Difference:</p>
-                <details>
-                  <summary>?</summary>
-                  <p className="detailsSubDif">Subtract the difference of the two original tank pressures from the two thirds added togethergit.</p>
-                </details>
                 <p>{this.state.subtractDifference}</p>
               </span>
             </div>
@@ -186,9 +168,8 @@ class App extends React.Component {
               <h2>Turn Pressure:</h2> <h2>{this.state.finalResult}</h2>
             </div>
           </div>
-
           <footer className="footer">
-            <p><u>More by JMD™</u></p>
+            <p><u>Built by JMD™</u></p>
           </footer>
 
         </div>

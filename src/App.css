@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Romanesco&display=swap');
+
 *{
   margin: 0;
   padding: 0;
@@ -6,35 +8,15 @@
 
 html {
   min-height: 100%;
+  /*background-color: #f2ed6b4b;*/
   background-image: url(./background.JPG);
-  background-color: #d3f86b;
   background-blend-mode: darken;
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
   box-sizing: border-box;
 }
-/*
-#root {
-  display: flex;
-  justify-content: center;
-  float: left;
-}
 
-/*
-
-.App {
-  display: flex; 
-  justify-content: center;
-  flex-direction: column;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
-  /*width: 400px;
-  height: 800px;
-  text-align: center;
-  background-color: yellow;
-  
-}
-*/
 .navbar {
   height: 12%;
   display: flex;
@@ -42,19 +24,19 @@ html {
   cursor: pointer;
   margin-left: 40px;
   color: white;
+  padding: 10px;
+  position: fixed;
 }
 
-.nav {
-  flex: 1;
-  text-align: right;
-  margin-right: 40px;
-}
-
-.details1 {
+.pageTitle {
+  font-family: 'Romanesco', cursive;
+  font-size: 75px;
+  font-weight: 500;
+  color: white;
   background-color: black;
-  opacity: 75%;
+  padding-left: 25px;
+  opacity: 80%;
 }
-
 
 .calculator{
   display: flex;
@@ -70,6 +52,7 @@ html {
  color: white;
  opacity: 80%;
  border-radius: 10px;
+ margin: 60px 0px 60px 55px;
 }
 
 .body{
@@ -87,7 +70,9 @@ html {
   display: flex;
   justify-content: space-between;
   width: 90%;
+  padding: 10px;
 }
+
 .finalResult {
   text-align: center;
 }
@@ -113,7 +98,7 @@ html {
 
 
 .detailsSubDif{
-clear: right;
+  clear: right;
 }
 
 .SubDifSpan{
@@ -126,10 +111,11 @@ clear: right;
   bottom: 0;
   width: 100%;
   background-color: #000000;
-  opacity: 15%;
+  opacity: 85%;
   color: white;
   text-align: center;
   cursor: pointer;
+  padding: 5px;
 }
 
 
