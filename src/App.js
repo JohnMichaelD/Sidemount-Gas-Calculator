@@ -111,7 +111,7 @@ class App extends React.Component {
             <nav className="nav">
               <h5>
               <a href="#">HOME </a>
-              
+
               <a href="#"> INFO</a>
               </h5> 
             </nav>
@@ -126,6 +126,10 @@ class App extends React.Component {
           </header>
 
           {/*Full Calculator Contianer*/}
+        <div className="calcRow">
+
+          <div className="calcLeftSpace"> Boat</div>
+
           <div className="calculator">
             <div className="tankPressureRow">
               <p>Left Tank Pressure:</p>
@@ -135,6 +139,7 @@ class App extends React.Component {
               <p2>Right Tank Pressure:</p2>
               <input className="pressureInput" id="rTankPressure"></input> <p>PSI</p>
             </div>
+        </div>
 
             {this.state.step === "input" ? <div onClick={() => { this.calculateThirds() }} className="answerButton">Calculate Thirds</div> : ""}
             {this.state.step === "thirds" ? <div onClick={() => { this.addTogether() }} className="answerButton">Add Together</div> : ""}
