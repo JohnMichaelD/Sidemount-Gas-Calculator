@@ -39,15 +39,13 @@ html {
 }
 
 .calculator{
-  display: flex;
+ display: flex;
  justify-content: center;
-  align-items: center;
- display: flex; 
+ align-items: center;
  flex-direction: column;
  font-family: Verdana, Geneva, Tahoma, sans-serif;
  width: 600px;
- height: 400px;
- text-align: center;
+ height: 530px;
  background-color: black;
  color: white;
  opacity: 80%;
@@ -55,22 +53,11 @@ html {
  margin: 60px 0px 60px 55px;
 }
 
-.body{
- display: flex; 
- flex-direction: column;
- font-family: Verdana, Geneva, Tahoma, sans-serif;
- width: 50%;
- text-align: center;
- background-color: black;
- color: white;
- border-radius: 20%;
-}
-
 .tankPressureRow {
   display: flex;
   justify-content: space-between;
   width: 90%;
-  padding: 10px;
+  padding: 10px 0px 10px 0px;
 }
 
 .finalResult {
@@ -78,31 +65,22 @@ html {
 }
 
 .pressureInput {
-  height: 25%;
   display: flex;
-  justify-content: end;
-  border-radius: 5%;
+  justify-content: flex-end;
+  border-radius: 3px;
 }
 
 .answerButton {
-  text-align: center;
+  display: flex;
+  justify-content: center;
   color: white;
   border: solid black 1px; 
   background-color: grey;
-  width: 100px;
+  width: 120px;
   cursor: pointer;
   margin: 1.5%;
   padding: 0.5%;
-  border-radius: 5%;
-}
-
-
-.detailsSubDif{
-  clear: right;
-}
-
-.SubDifSpan{
-  float:left;
+  border-radius: 3px;
 }
 
 .footer{
@@ -116,15 +94,5 @@ html {
   text-align: center;
   cursor: pointer;
   padding: 5px;
-}
-
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
 }
 

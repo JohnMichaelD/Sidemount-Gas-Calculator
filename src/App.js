@@ -1,6 +1,6 @@
 import React from 'react';
-import logo from './logo.svg';
-import diver from './Sidemount2.png';
+//import logo from './logo.svg';
+//import diver from './Sidemount2.png';
 import './App.css';
 
 class App extends React.Component {
@@ -15,7 +15,6 @@ class App extends React.Component {
     }
   }
 
-  //
   calculateThirds() {
     let leftTankPressure = document.getElementById("lTankPressure").value
     let leftTankThird = Math.floor(leftTankPressure / 3)
@@ -50,21 +49,21 @@ class App extends React.Component {
     })
   }
 
+  /*Adds two starting pressures together*/
   addTogether() {
     let sum = this.state.leftTankThird + this.state.rightTankThird
     this.setState({
       step: "addedTogether",
       addTogether: sum
     })
-
   }
 
+  /*Subtracts the difference of the two starting pressures from sum */
   subtractDifference() {
     let sum = this.state.addTogether - Math.abs(this.state.leftTankPressure - this.state.rightTankPressure)
     this.setState({
       step: "subtractDifference",
       subtractDifference: sum
-
     })
   }
 
@@ -74,7 +73,6 @@ class App extends React.Component {
       step: "divide",
       divide: sum
     })
-
   }
 
   subtractFromLowerTank() {
@@ -83,7 +81,6 @@ class App extends React.Component {
       // left tank is higher pressure
       subtractedFromLower = this.state.rightTankPressure - this.state.divide
     }
-
     this.setState({
       step: "subtractFromLowerTank",
       subtractFromLowerTank: subtractedFromLower
@@ -96,83 +93,84 @@ class App extends React.Component {
       step: "finalResult",
       finalResult: sum
     })
-
   }
+
+  
+  /*refresh() {
+    this.setState({
+      step: "refresh"
+    })
+    window.location.reload(false);
+ }*/
 
   //HTML code begins here.
   render() {
     return (
-      
-
       <div className="App">
 
-        
-          <header className="header">
-            <h1 className="pageTitle">Sidemount Calc</h1>
-          </header>
+        <header className="header">
+          <h1 className="pageTitle">Sidemount Calc</h1>
+        </header>
 
-          {/*Full Calculator Contianer*/}
-          <div className="calcRow">
+        <div className="calculator">
 
-  
-
-          <div className="calculator">
-            <div className="tankPressureRow">
-              <p>Left Tank Pressure:</p>
-              <input className="pressureInput" id="lTankPressure"></input> <p>PSI</p>
-            </div>
-            <div className="tankPressureRow">
-              <p2>Right Tank Pressure:</p2>
-              <input className="pressureInput" id="rTankPressure"></input> <p>PSI</p>
-            </div>
-        
-
-            {this.state.step === "input" ? <div onClick={() => { this.calculateThirds() }} className="answerButton">Calculate Thirds</div> : ""}
-            {this.state.step === "thirds" ? <div onClick={() => { this.addTogether() }} className="answerButton">Add Together</div> : ""}
-            {this.state.step === "addedTogether" ? <div onClick={() => { this.subtractDifference() }} className="answerButton">Subtract Difference</div> : ""}
-            {this.state.step === "subtractDifference" ? <div onClick={() => { this.divide() }} className="answerButton">Divide in Half</div> : ""}
-            {this.state.step === "divide" ? <div onClick={() => { this.subtractFromLowerTank() }} className="answerButton">Subtract From Lower Tank</div> : ""}
-            {this.state.step === "subtractFromLowerTank" ? <div onClick={() => { this.finalResult() }} className="answerButton">So Turn Pressure =</div> : ""}
-            {this.state.step === "finalResult" ? <div onClick={() => { this.finalResult() }} className="answerButton">Done!</div> : ""}
-            {this.state.step === "refresh" ? <div onClick={() => { this.refresh() }} className="answerButton">Refresh?</div> : ""}
-
-            <div className="tankPressureRow">
-              <p>Left Third : Right Third</p>
-              <p>{this.state.leftTankThird}:{this.state.rightTankThird}</p>
-            </div>
-
-            <div className="tankPressureRow">
-              <p>Add Together:</p>
-              <p>{this.state.addTogether}</p>
-            </div>
-
-            <div className="tankPressureRow">
-              <span className="SubDifSpan">
-                <p>Subtract Difference:</p>
-                <p>{this.state.subtractDifference}</p>
-              </span>
-            </div>
-
-            <div className="tankPressureRow">
-              <p>Divide in Half:</p>
-              <p>{this.state.divide}</p>
-            </div>
-
-            <div className="tankPressureRow">
-              <p>Subtract From Lower Tank:</p>
-              <p>{this.state.subtractFromLowerTank}</p>
-            </div>
-
-            {/* */}
-            <div className="finalResult">
-              <h2>Turn Pressure:</h2> <h2>{this.state.finalResult}</h2>
-            </div>
+          <div className="tankPressureRow">
+            <p>Left Tank Pressure: </p>
+            <input className="pressureInput" id="lTankPressure"></input> <p>PSI</p>
           </div>
-          <footer className="footer">
-            <p><u>Built by JMD™</u></p>
-          </footer>
+
+          <div className="tankPressureRow">
+            <p2>Right Tank Pressure:</p2>
+            <input className="pressureInput" id="rTankPressure"></input> <p>PSI</p>
+          </div>
+      
+          {this.state.step === "input" ? <div onClick={() => { this.calculateThirds() }} className="answerButton">Calculate!</div> : ""}
+          {this.state.step === "thirds" ? <div onClick={() => { this.addTogether() }} className="answerButton">Next Step</div> : ""}
+          {this.state.step === "addedTogether" ? <div onClick={() => { this.subtractDifference() }} className="answerButton">Next Step</div> : ""}
+          {this.state.step === "subtractDifference" ? <div onClick={() => { this.divide() }} className="answerButton">Next Step</div> : ""}
+          {this.state.step === "divide" ? <div onClick={() => { this.subtractFromLowerTank() }} className="answerButton">Next Step</div> : ""}
+          {this.state.step === "subtractFromLowerTank" ? <div onClick={() => { this.finalResult() }} className="answerButton">TP equals:</div> : ""}
+          {this.state.step === "finalResult" ? <div onClick={() => { this.finalResult() }} className="answerButton">Done!</div> : ""}
+          {/*{this.state.step === "refresh" ? <div onClick={() => { this.refresh() }} className="answerButton">Restart</div> : ""}*/}
+
+          <div className="tankPressureRow">
+            <p>Left Third : Right Third</p>
+            <p>{this.state.leftTankThird}:{this.state.rightTankThird}</p>
+          </div>
+
+          <div className="tankPressureRow">
+            <p>Add Together:</p>
+            <p>{this.state.addTogether}</p>
+          </div>
+
+          <div className="tankPressureRow">
+              <p>Subtract Difference:</p>
+              <p>{this.state.subtractDifference}</p>   
+          </div>
+
+          <div className="tankPressureRow">
+            <p>Divide in Half:</p>
+            <p>{this.state.divide}</p>
+          </div>
+
+          <div className="tankPressureRow">
+            <p>Subtract From Lower Tank:</p>
+            <p>{this.state.subtractFromLowerTank}</p>
+          </div>
+
+          <div className="finalResult">
+            <h2>Turn Pressure:</h2> 
+            <h2>{this.state.finalResult}</h2>
+          </div>
+
+          <button className="answerButton" onClick={() => window.location.reload(false)}>Restart</button>
 
         </div>
+
+        <footer className="footer">
+          <p><u>Built by JMD™</u></p>
+        </footer>
+
       </div>
     );
   }

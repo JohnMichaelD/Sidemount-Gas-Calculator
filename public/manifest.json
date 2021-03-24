@@ -1,6 +1,6 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "short_name": "Sidemount Calc",
+  "name": "Sidemount Gas Calculator",
   "icons": [
     {
       "src": "favicon.ico",
