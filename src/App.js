@@ -113,17 +113,18 @@ class App extends React.Component {
         </header>
 
         <div className="calculator">
+        <hr className="divLine"></hr>
 
           <div className="tankPressureRow">
-            <p>Left Tank Pressure: </p>
+            <p><strong>Left Tank Pressure:</strong></p>
             <input className="pressureInput" id="lTankPressure"></input> <p>PSI</p>
           </div>
 
           <div className="tankPressureRow">
-            <p2>Right Tank Pressure:</p2>
+            <p2><strong>Right Tank Pressure:</strong></p2>
             <input className="pressureInput" id="rTankPressure"></input> <p>PSI</p>
           </div>
-      
+
           {this.state.step === "input" ? <div onClick={() => { this.calculateThirds() }} className="answerButton">Calculate!</div> : ""}
           {this.state.step === "thirds" ? <div onClick={() => { this.addTogether() }} className="answerButton">Next Step</div> : ""}
           {this.state.step === "addedTogether" ? <div onClick={() => { this.subtractDifference() }} className="answerButton">Next Step</div> : ""}
@@ -132,6 +133,8 @@ class App extends React.Component {
           {this.state.step === "subtractFromLowerTank" ? <div onClick={() => { this.finalResult() }} className="answerButton">TP equals:</div> : ""}
           {this.state.step === "finalResult" ? <div onClick={() => { this.finalResult() }} className="answerButton">Done!</div> : ""}
           {/*{this.state.step === "refresh" ? <div onClick={() => { this.refresh() }} className="answerButton">Restart</div> : ""}*/}
+
+          <hr className="divLine"></hr>
 
           <div className="tankPressureRow">
             <p>Left Third : Right Third</p>
@@ -163,12 +166,14 @@ class App extends React.Component {
             <h2>{this.state.finalResult}</h2>
           </div>
 
+          <hr className="divLine"></hr>
+
           <button className="answerButton" onClick={() => window.location.reload(false)}>Restart</button>
 
         </div>
 
         <footer className="footer">
-          <p><u>Built by JMD™</u></p>
+          <a id="footerText" href="https://github.com/JohnMichaelD">Built by JMD</a>
         </footer>
 
       </div>
