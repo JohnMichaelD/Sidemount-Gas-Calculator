@@ -173,7 +173,7 @@ class App extends React.Component {
         </div>
 
         <footer className="footer">
-          <a id="footerText" href="https://github.com/JohnMichaelD">Built by JMD</a>
+          <a id="footerText" href="https://github.com/JohnMichaelD">JMD</a>
         </footer>
 
       </div>

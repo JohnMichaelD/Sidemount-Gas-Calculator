@@ -71,17 +71,25 @@ html {
   border-radius: 3px;
 }
 
+.answerButton:hover {
+  color: #000000;
+  border: #000000 solid 1px;
+  background:#fff;
+}
+
 .answerButton {
   display: flex;
   justify-content: center;
   color: white;
   border: solid black 1px; 
   background-color: grey;
+  font-size: medium;
   width: 120px;
   cursor: pointer;
   margin: 1.5%;
   padding: 0.5%;
   border-radius: 3px;
+  box-shadow: 0 1px 1px rgba(54, 54, 54, 0.5), 0 1px 1px rgba(145, 144, 144, 0.7);
 }
 
 .divLine {
@@ -90,11 +98,12 @@ html {
 }
 
 #footerText:hover {
-  color: yellow;
+  opacity: 1.0;
 }
 
 #footerText {
   color: white;
+  opacity: 0.5;
 }
 
 .footer{
