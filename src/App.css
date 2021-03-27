@@ -17,15 +17,12 @@ html {
   box-sizing: border-box;
 }
 
-.navbar {
-  height: 12%;
-  display: flex;
-  align-items: center;
-  cursor: pointer;
-  margin-left: 40px;
-  color: white;
-  padding: 10px;
-  position: fixed;
+.header {
+display: wrap;
+width: 100%;
+background-color: black;
+color: white;
+opacity: 0.8;
 }
 
 .pageTitle {
@@ -33,9 +30,11 @@ html {
   font-size: 75px;
   font-weight: 500;
   color: white;
-  background-color: black;
   padding-left: 25px;
-  opacity: 0.8;
+}
+
+.menuBar {
+  justify-content: flex-end;
 }
 
 .calculator{

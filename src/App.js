@@ -110,9 +110,11 @@ class App extends React.Component {
 
         <header className="header">
           <h1 className="pageTitle">Sidemount Calc</h1>
+          <div className="menuBar"><p>Resources</p></div>
         </header>
 
         <div className="calculator">
+        <h2>Calculate Turn Pressure for Thirds:</h2>
         <hr className="divLine"></hr>
 
           <div className="tankPressureRow">
@@ -121,7 +123,7 @@ class App extends React.Component {
           </div>
 
           <div className="tankPressureRow">
-            <p2><strong>Right Tank Pressure:</strong></p2>
+            <h2><strong>Right Tank Pressure:</strong></h2>
             <input className="pressureInput" id="rTankPressure"></input> <p>PSI</p>
           </div>
 
@@ -162,7 +164,7 @@ class App extends React.Component {
           </div>
 
           <div className="finalResult">
-            <h2>Turn Pressure:</h2> 
+            <h2>Turn Pressure Is:</h2> 
             <h2>{this.state.finalResult}</h2>
           </div>
 
