@@ -20,16 +20,22 @@ class App extends React.Component {
     let leftTankThird = Math.floor(leftTankPressure / 3)
     console.log(leftTankThird)
 
+    let rightTankPressure = document.getElementById("rTankPressure").value
+    let rightTankThird = Math.floor(rightTankPressure / 3)
+    console.log(rightTankThird)
+
+    if (leftTankPressure > 45 || rightTankPressure > 45 ) {
+      alert("Note: This tool is used to help memorize thirds during in-water checks. For example, if your starting pressure is 2750 psi, round down and input 27. Or funky numbers will apear.")
+    } else {
+      console.log ("adequate starting pressures")
+    }
+
     //Alert for starting pressures below 1500PSI
     if (leftTankThird >= 15) {
       console.log("it's gonna blow!")
     } else {
       console.log("you're okay")
     }
-
-    let rightTankPressure = document.getElementById("rTankPressure").value
-    let rightTankThird = Math.floor(rightTankPressure / 3)
-    console.log(rightTankThird)
 
     //Advisory for low pressure
     if (rightTankPressure <= 15) {
@@ -123,7 +129,7 @@ class App extends React.Component {
           </div>
 
           <div className="tankPressureRow">
-            <h2><strong>Right Tank Pressure:</strong></h2>
+            <p><strong>Right Tank Pressure:</strong></p>
             <input className="pressureInput" id="rTankPressure"></input> <p>PSI</p>
           </div>
 
