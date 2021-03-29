@@ -23,6 +23,7 @@ width: 100%;
 background-color: black;
 color: white;
 opacity: 0.8;
+position: relative;
 }
 
 .pageTitle {
@@ -34,7 +35,10 @@ opacity: 0.8;
 }
 
 .menuBar {
-  justify-content: flex-end;
+  position: absolute;
+  right: 10%;
+  background-color: black;
+  width: 50%;
 }
 
 .calculator{

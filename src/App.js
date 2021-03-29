@@ -125,12 +125,12 @@ class App extends React.Component {
 
           <div className="tankPressureRow">
             <p><strong>Left Tank Pressure:</strong></p>
-            <input className="pressureInput" id="lTankPressure"></input> <p>PSI</p>
+            <input className="pressureInput" id="lTankPressure" placeholder="Example: 29"></input> <p>PSI</p>
           </div>
 
           <div className="tankPressureRow">
             <p><strong>Right Tank Pressure:</strong></p>
-            <input className="pressureInput" id="rTankPressure"></input> <p>PSI</p>
+            <input className="pressureInput" id="rTankPressure" placeholder="Example: 33"></input> <p>PSI</p>
           </div>
 
           {this.state.step === "input" ? <div onClick={() => { this.calculateThirds() }} className="answerButton">Calculate!</div> : ""}
