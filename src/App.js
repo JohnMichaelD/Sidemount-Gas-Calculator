@@ -116,9 +116,11 @@ class App extends React.Component {
 
         <header className="header">
           <h1 className="pageTitle">Sidemount Calc</h1>
-          <div className="menuBar"><p>Resources</p></div>
+          <div className="menuBar">
+            <p id="menuItems"> Resources </p>
+            <p id="menuItems"> <a href="/src/Instructions.js">Instructions</a></p>
+          </div>
         </header>
-
         <div className="calculator">
         <h2>Calculate Turn Pressure for Thirds:</h2>
         <hr className="divLine"></hr>

@@ -24,6 +24,7 @@ background-color: black;
 color: white;
 opacity: 0.8;
 position: relative;
+padding-top: 10px;
 }
 
 .pageTitle {
@@ -35,10 +36,17 @@ position: relative;
 }
 
 .menuBar {
-  position: absolute;
-  right: 10%;
+  float: right;
   background-color: black;
-  width: 50%;
+  width: 100%;
+  color: white;
+}
+
+#menuItems {
+  float: right;
+  padding: 0px 15px 5px 15px;
+  cursor: pointer;
+  font-weight: 500;
 }
 
 .calculator{
@@ -101,7 +109,15 @@ position: relative;
 }
 
 #footerText:hover {
-  opacity: 1.0;
+  animation-name: footer-hover;
+  animation-duration: 500ms;
+  animation-fill-mode: forwards;
+}
+
+@keyframes footer-hover {
+  100% {
+    opacity: 1.0;
+  }
 }
 
 #footerText {
