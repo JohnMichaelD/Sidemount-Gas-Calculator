@@ -142,10 +142,15 @@ padding-top: 10px;
   padding: 5px;
 }
 
-@media (max-width: 500px) {
+@media (max-width: 450px) {
+
+  .header {
+    width: 100vw;
+  }
 
   .calculator{
-    width: 400px;
+    width: 80vw;
+    margin: 60px 55px 60px 55px;
    }
   
    .tankPressureRow {
