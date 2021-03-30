@@ -49,6 +49,10 @@ padding-top: 10px;
   font-weight: 500;
 }
 
+.calcTitle {
+  color: white;
+}
+
 .calculator{
  display: flex;
  justify-content: center;
@@ -136,4 +140,19 @@ padding-top: 10px;
   text-align: center;
   cursor: pointer;
   padding: 5px;
+}
+
+@media (max-width: 500px) {
+
+  .calculator{
+    width: 400px;
+   }
+  
+   .tankPressureRow {
+    font-size: 90%;
+   }
+
+   .calcTitle {
+     font-size: large;
+   }
 }
