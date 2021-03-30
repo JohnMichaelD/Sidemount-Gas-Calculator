@@ -149,12 +149,12 @@ padding-top: 10px;
   }
 
   .calculator{
-    width: 80vw;
-    margin: 60px 55px 60px 55px;
+    width: 370px;
+    margin: 60px 10px 60px 20px;
    }
   
    .tankPressureRow {
-    font-size: 90%;
+    font-size: 85%;
    }
 
    .calcTitle {
