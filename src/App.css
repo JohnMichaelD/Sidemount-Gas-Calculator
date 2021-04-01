@@ -51,6 +51,7 @@ padding-top: 10px;
 
 .calcTitle {
   color: white;
+  padding-top: 10px;
 }
 
 .calculator{
@@ -107,6 +108,20 @@ padding-top: 10px;
   box-shadow: 0 1px 1px rgba(54, 54, 54, 0.5), 0 1px 1px rgba(145, 144, 144, 0.7);
 }
 
+.answerButton2 {
+  display: flex;
+  justify-content: center;
+  color: white;
+  border: solid black 1px; 
+  background-color: grey;
+  font-size: medium;
+  width: 120px;
+  cursor: pointer;
+  padding-bottom: 10px;
+  border-radius: 3px;
+  box-shadow: 0 1px 1px rgba(54, 54, 54, 0.5), 0 1px 1px rgba(145, 144, 144, 0.7);
+}
+
 .divLine {
   width: 99.6%;
   margin: 10px 0px 10px 0px;
@@ -140,6 +155,7 @@ padding-top: 10px;
   text-align: center;
   cursor: pointer;
   padding: 5px;
+  z-index: -1;
 }
 
 @media (max-width: 450px) {
@@ -159,5 +175,6 @@ padding-top: 10px;
 
    .calcTitle {
      font-size: large;
+     padding-top: 0px;
    }
 }

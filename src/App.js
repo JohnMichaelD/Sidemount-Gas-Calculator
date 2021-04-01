@@ -179,7 +179,7 @@ class App extends React.Component {
 
           <hr className="divLine"></hr>
 
-          <button className="answerButton" onClick={() => window.location.reload(false)}>Restart</button>
+          <button className="answerButton2" onClick={() => window.location.reload(false)}>Restart</button>
 
         </div>
 
