@@ -123,7 +123,7 @@ class App extends React.Component {
           </nav>
         </header>
         <div className="calculator">
-        <h2 className="calcTitle">Calculate Turn Pressure for Thirds:</h2>
+        <h2 className="calcTitle">Calculate Turn Pressure for Thirds</h2>
         <hr className="divLine"></hr>
 
           <div className="tankPressureRow">
