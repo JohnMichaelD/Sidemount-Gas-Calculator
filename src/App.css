@@ -87,6 +87,11 @@ padding-top: 10px;
   border-radius: 3px;
 }
 
+#lTankPressure {
+  margin-left: 13px;
+}
+
+.answerButton2:hover,
 .answerButton:hover {
   color: #000000;
   border: #000000 solid 1px;
@@ -111,13 +116,15 @@ padding-top: 10px;
 .answerButton2 {
   display: flex;
   justify-content: center;
+  align-items: center;
   color: white;
   border: solid black 1px; 
   background-color: grey;
   font-size: medium;
   width: 120px;
   cursor: pointer;
-  padding-bottom: 10px;
+  padding: 5px;
+  margin-bottom: 15px;
   border-radius: 3px;
   box-shadow: 0 1px 1px rgba(54, 54, 54, 0.5), 0 1px 1px rgba(145, 144, 144, 0.7);
 }
