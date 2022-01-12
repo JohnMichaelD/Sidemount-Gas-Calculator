@@ -117,9 +117,9 @@ class App extends React.Component {
         <header className="header">
           <h1 className="pageTitle">Sidemount Calc</h1>
           <nav className="menuBar">
-            <p id="menuItems"> Contact </p>
+            {/*<p id="menuItems">Contact</p>
             <p id="menuItems"> Resources </p>
-            <p id="menuItems"> Instructions </p>
+            <p id="menuItems"> Instructions </p>*/}
           </nav>
         </header>
         <div className="calculator">
@@ -184,7 +184,7 @@ class App extends React.Component {
         </div>
 
         <footer className="footer">
-          <a id="footerText" href="https://github.com/JohnMichaelD">&copy; 2021 JMD</a>
+          <a id="footerText" href="https://github.com/JohnMichaelD">&copy; 2021 Design by JMD -</a><a id="footerText" href="https://www.instagram.com/sfsidemountvan/?utm_medium=copy_link"> Sidemount: Lexi Fraser</a>
         </footer>
 
       </div>
