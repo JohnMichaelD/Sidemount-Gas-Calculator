@@ -4,8 +4,7 @@ import './Instructions.css';
 
 render(); {
     return (
-        <h1>Instructions: </h1>
-
+        <h1>Instructions:</h1>
     );
 }
 export default Instructions;

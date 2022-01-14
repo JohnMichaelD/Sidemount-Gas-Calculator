@@ -32,21 +32,36 @@ padding-top: 10px;
   font-size: 75px;
   font-weight: 500;
   color: white;
-  padding-left: 25px;
+  padding-left: 75px;
 }
 
 .menuBar {
-  float: right;
   background-color: black;
   width: 100%;
   color: white;
+  display: flex;
+  flex-direction: row-reverse;
 }
 
-#menuItems {
-  float: right;
-  padding: 0px 15px 5px 15px;
+.menuItems {
+  padding: 0px 25px 5px 25px;
   cursor: pointer;
   font-weight: 500;
+}
+
+.menuItems:link {
+  text-decoration: none;
+  color: white;
+}
+
+.menuItems:visited  {
+  text-decoration: none;
+  color: white;
+}
+
+.menuItems:hover  {
+  text-decoration: underline;
+  color: yellow;
 }
 
 .titleContainer {
@@ -140,7 +155,7 @@ padding-top: 10px;
   margin: 10px 0px 10px 0px;
 }
 
-#footerText:hover {
+.footerText:hover {
   animation-name: footer-hover;
   animation-duration: 500ms;
   animation-fill-mode: forwards;
@@ -152,7 +167,7 @@ padding-top: 10px;
   }
 }
 
-#footerText {
+.footerText {
   color: white;
   opacity: 0.5;
 }
