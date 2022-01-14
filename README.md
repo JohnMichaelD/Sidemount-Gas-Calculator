@@ -54,11 +54,11 @@ This is a tool to help divers learning air management for sidemount diving. [Che
 
     ### What I Learned
 
-    This was my first time using react and npm.
+    This app was a great way to pull everything I learned about HTML, CSS, and Javascript into one project. This was my first time using react and npm. 
 
     ### Continued Development
 
-   - I would like to continue with react, and keep building more projects using react.
+   - I would like to continue with react, and keep building more projects using react to deepen my knowledge.
 
     - I would like to update the application to accept both **bar** and **psi** pressure inputs.
 
