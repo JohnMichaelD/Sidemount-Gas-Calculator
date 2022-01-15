@@ -75,3 +75,5 @@ This is a tool to help divers learning air management for sidemount diving. [Che
     - [React App to Github Pages](https://dev.to/yuribenjamin/how-to-deploy-react-app-in-github-pages-2a1f)
 
     - [Linking to new page in React](https://stackoverflow.com/questions/63979705/how-to-link-to-another-page-in-react)
+
+    - [Using page router in React](https://www.freecodecamp.org/news/react-router-tutorial/)
