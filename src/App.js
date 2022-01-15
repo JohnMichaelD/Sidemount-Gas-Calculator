@@ -1,6 +1,4 @@
 import React from 'react';
-//import logo from './logo.svg';
-//import diver from './Sidemount2.png';
 import './App.css';
 
 class App extends React.Component {

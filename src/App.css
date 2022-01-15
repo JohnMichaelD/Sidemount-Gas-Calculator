@@ -61,7 +61,7 @@ padding-top: 10px;
 
 .menuItems:hover  {
   text-decoration: underline;
-  color: yellow;
+  color: rgba(167, 227, 39, 1);
 }
 
 .titleContainer {
@@ -159,6 +159,10 @@ padding-top: 10px;
   animation-name: footer-hover;
   animation-duration: 500ms;
   animation-fill-mode: forwards;
+}
+
+.footerText:link {
+  text-decoration: none;
 }
 
 @keyframes footer-hover {
